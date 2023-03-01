@@ -1,0 +1,87 @@
+import { Head, Image, Appear } from "mdx-deck";
+
+import Code from "./Code";
+import Cover from "./Cover";
+import Intro from "./Intro";
+import Website from "./Website";
+import Thanks from "./Thanks";
+
+export { default as theme } from "./theme";
+export * as components from "./components";
+
+<Head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
+  <title>CI/CD - What and why?</title>
+</Head>
+
+<Cover />
+
+---
+
+<Intro />
+
+---
+
+# Overview
+
+<ul>
+  <li>What is CI/CD and why is it important?</li>
+  <li>The benefits of CI/CD</li>
+  <li>What is ESLint</li>
+  <li>Why ESLint</li>
+  <li>Creating a plugin</li>
+  <li>Creating rules</li>
+  <li>Auto fixing</li>
+  <li>Testing rules</li>
+</ul>
+
+---
+
+# What is CI/CD and why is it important?
+
+<ul>
+  <Appear>
+    <li>Deliver high-quality software</li>
+    <li>Faster</li>
+    <li>Automated</li>
+    <li>Reliable</li>
+    <li>Safer</li>
+    <li>No human interaction</li>
+  </Appear>
+</ul>
+
+---
+
+# The benefits of CI/CD
+
+<ul>
+  <Appear>
+    <li>Development cycle</li>
+    <li>Catch and fix bugs early</li>
+    <li>Overall cost reduction of bug fix</li>
+    <li>Efficient workflows</li>
+    <li>Overall improvement in quality and delivery</li>
+  </Appear>
+</ul>
+
+---
+
+# References
+
+- [Working with plugins - ESLint docs](https://eslint.org/docs/latest/developer-guide/working-with-plugins)
+- [Working with rules - ESLint docs](https://eslint.org/docs/latest/developer-guide/working-with-rules)
+- [Custom rules - TypeScript ESLint](https://typescript-eslint.io/docs/development/custom-rules)
+
+---
+
+<Website />
+
+---
+
+<Thanks />
