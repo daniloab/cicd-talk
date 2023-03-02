@@ -5,6 +5,11 @@ import Cover from "./Cover";
 import Intro from "./Intro";
 import Website from "./Website";
 import Thanks from "./Thanks";
+import CircleCI from "./circleci/CircleCI";
+import CircleCiPipeline from "./circleci/CircleCiPipeline";
+import CircleCiPipelineDetailFailing from "./circleci/CircleCiPipelineDetailFailing";
+import CircleCiPipelineDetailFailingDetail from "./circleci/CircleCiPipelineDetailFailingDetail";
+import CircleCiPipelineSuccess from "./circleci/CircleCiPipelineSuccess";
 
 export { default as theme } from "./theme";
 export * as components from "./components";
@@ -17,7 +22,7 @@ export * as components from "./components";
     rel="stylesheet"
   />
   <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
-  <title>CI/CD - What and why?</title>
+  <title>CI/CD - Practical Benefits</title>
 </Head>
 
 <Cover />
@@ -33,9 +38,10 @@ export * as components from "./components";
 <ul>
   <li>What is CI/CD and why is it important?</li>
   <li>The benefits of CI/CD</li>
-  <li>What is ESLint</li>
-  <li>Why ESLint</li>
-  <li>Creating a plugin</li>
+  <li>Concept: Continuous Integration</li>
+  <li>Concept: Continuous Delivery</li>
+  <li>Pipeline</li>
+  <li>CI/CD at Woovi</li>
   <li>Creating rules</li>
   <li>Auto fixing</li>
   <li>Testing rules</li>
@@ -72,11 +78,59 @@ export * as components from "./components";
 
 ---
 
+# Workflows and Pipelines
+
+<ul>
+  <Appear>
+    <li>Automated steps/stages</li>
+    <li>Predefined rules and conditions</li>
+    <li>Ensure that every change pass by the same checks from steps/stages</li>
+    <li>Conditional build</li>
+    <li>Split tests</li>
+  </Appear>
+</ul>
+
+---
+
+# Woovi CI/CD
+
+<ul>
+  <Appear>
+    <li>CircleCI</li>
+    <li>GitHub Actions</li>
+    <li>BOTina</li>
+    <li>Slack</li>
+    <li>AWS</li>
+    <li>k8s</li>
+  </Appear>
+</ul>
+
+---
+
+<CircleCI />
+
+---
+
+<CircleCiPipeline />
+
+---
+
+<CircleCiPipelineDetailFailing />
+
+---
+
+<CircleCiPipelineDetailFailingDetail />
+
+---
+
+<CircleCiPipelineSuccess />
+
+---
+
 # References
 
-- [Working with plugins - ESLint docs](https://eslint.org/docs/latest/developer-guide/working-with-plugins)
-- [Working with rules - ESLint docs](https://eslint.org/docs/latest/developer-guide/working-with-rules)
-- [Custom rules - TypeScript ESLint](https://typescript-eslint.io/docs/development/custom-rules)
+- [Woovi - Shipping to Production Series'](https://dev.to/daniloab/series/20183)
+- [CI/CD 101 | All you need to know](https://dev.to/katalon/ci-cd-101-all-you-need-to-know-4j04)
 
 ---
 
