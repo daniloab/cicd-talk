@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Background = styled.div`
   position: absolute;
@@ -20,8 +20,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Img = styled.img`
-`;
+const Img = styled.img``;
 
 const Name = styled.h3`
   color: #333;
@@ -31,7 +30,7 @@ const Cover = () => {
   return (
     <Background>
       <Container>
-          <h1>CI/CD - What and why?</h1>
+        <h1>CI/CD - Practical Benefits</h1>
         <Img src="./img/cover.png" />
         <Name>Danilo Assis</Name>
       </Container>
