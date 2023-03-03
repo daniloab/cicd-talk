@@ -9,7 +9,7 @@ const CircleCiPipeline = () => {
   return (
     <>
       <h1>Pipelines</h1>
-      <Img src="../img/circleci/circleci-pipelines.png" />
+      <Img src="../img/circleci-pipelines.png" />
     </>
   );
 };

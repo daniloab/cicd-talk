@@ -7,7 +7,7 @@ const BotinaHelpCommands = () => {
   return (
     <>
       <h1>BOTina - Help Commands</h1>
-      <Img src="../img/botina/botina-commands.png" />
+      <Img src="../img/botina-commands.png" />
     </>
   );
 };

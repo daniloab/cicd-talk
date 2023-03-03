@@ -10,7 +10,7 @@ const CircleCI = () => {
   return (
     <>
       <h1>Woovi CI/CD - CircleCI</h1>
-      <Img src="../img/circleci/circleci-dash.png" />
+      <Img src="../img/circleci-dash.png" />
     </>
   );
 };

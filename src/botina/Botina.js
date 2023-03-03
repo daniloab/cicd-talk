@@ -7,7 +7,7 @@ const Botina = () => {
   return (
     <>
       <h1>BOTina</h1>
-      <Img src="../img/botina/botina.png" />
+      <Img src="../img/botina.png" />
     </>
   );
 };

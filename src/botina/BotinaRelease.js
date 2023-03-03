@@ -7,7 +7,7 @@ const BotinaRelease = () => {
   return (
     <>
       <h1>BOTina - Release</h1>
-      <Img src="../img/botina/botina-release.png" />
+      <Img src="../img/botina-release.png" />
     </>
   );
 };
