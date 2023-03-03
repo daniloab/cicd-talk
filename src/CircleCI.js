@@ -3,15 +3,16 @@ import styled from "styled-components";
 
 export const Img = styled.img`
   border: 6px solid #fff;
+  width: 1200px;
 `;
 
-const CircleCiSlackHold = () => {
+const CircleCI = () => {
   return (
     <>
-      <h1>Workflow Production</h1>
-      <Img src="../img/circleci-hold-slack.png" />
+      <h1>Woovi CI/CD - CircleCI</h1>
+      <Img src="./img/circleci-dash.png" />
     </>
   );
 };
 
-export default CircleCiSlackHold;
+export default CircleCI;

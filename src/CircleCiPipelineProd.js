@@ -6,13 +6,13 @@ export const Img = styled.img`
   width: 1200px;
 `;
 
-const BotinaCircleCi = () => {
+const CircleCiPipelineProd = () => {
   return (
     <>
-      <h1>BOTina - CircleCI Release Workflow</h1>
-      <Img src="../img/botina-circleci-workflow.png" />
+      <h1>Workflow Prod Success</h1>
+      <Img src="./img/circleci-prod-pipeline.png" />
     </>
   );
 };
 
-export default BotinaCircleCi;
+export default CircleCiPipelineProd;

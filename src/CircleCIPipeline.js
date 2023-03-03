@@ -5,13 +5,13 @@ export const Img = styled.img`
   border: 6px solid #fff;
 `;
 
-const CircleCiSlack = () => {
+const CircleCiPipeline = () => {
   return (
     <>
-      <h1>Workflow Fail Slack Notification</h1>
-      <Img src="../img/circleci-slack-notify.png" />
+      <h1>Pipelines</h1>
+      <Img src="./img/circleci-pipelines.png" />
     </>
   );
 };
 
-export default CircleCiSlack;
+export default CircleCiPipeline;

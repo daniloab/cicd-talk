@@ -5,13 +5,13 @@ export const Img = styled.img`
   border: 6px solid #fff;
 `;
 
-const CircleCiPipeline = () => {
+const CircleCiSlackHold = () => {
   return (
     <>
-      <h1>Pipelines</h1>
-      <Img src="../img/circleci-pipelines.png" />
+      <h1>Workflow Production</h1>
+      <Img src="./img/circleci-hold-slack.png" />
     </>
   );
 };
 
-export default CircleCiPipeline;
+export default CircleCiSlackHold;

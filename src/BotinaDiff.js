@@ -7,7 +7,7 @@ const BotinaDiff = () => {
     return (
         <>
             <h1>BOTina - Diff Command</h1>
-            <Img src="../img/botina-diff.png" />
+            <Img src="./img/botina-diff.png" />
         </>
     );
 };

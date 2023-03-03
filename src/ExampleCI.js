@@ -9,7 +9,7 @@ const ExampleCI = () => {
   return (
     <>
       <h1>Examples of CI/CD to your Projects</h1>
-      <Img src="../img/logos.png" />
+      <Img src="./img/logos.png" />
     </>
   );
 };
