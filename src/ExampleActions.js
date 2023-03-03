@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 export const Img = styled.img`
+  width: 1500px;
 `;
 
-const ExampleDependabot = () => {
+const ExampleActions = () => {
   return (
     <>
       <h1>Dependabot Working</h1>
-      <Img src="../img/dependabot-prs.png" />
+      <Img src="./img/actions.png" />
     </>
   );
 };
 
-export default ExampleDependabot;
+export default ExampleActions;
