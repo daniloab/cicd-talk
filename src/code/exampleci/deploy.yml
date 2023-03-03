@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'my-server' #Must be unique in Heroku
+          heroku_email: 'hi@daniloassis.dev'
+          healthcheck: 'https://my.backend.com.br/status'
+          checkstring: 'Server Working'
+          rollbackonhealthcheckfailed: true
+        env:
+          JWT_KEY: ${{secrets.JWT_KEY}}
+          MONGO_URI: ${{secrets.MONGO_URI}}
