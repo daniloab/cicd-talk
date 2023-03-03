@@ -9,7 +9,7 @@ const ExampleActions = () => {
   return (
     <>
       <h1>Dependabot Working</h1>
-      <Img src="../img/exampleci/actions.png" />
+      <Img src="../img/actions.png" />
     </>
   );
 };

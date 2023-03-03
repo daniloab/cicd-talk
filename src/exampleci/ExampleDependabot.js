@@ -8,7 +8,7 @@ const ExampleDependabot = () => {
   return (
     <>
       <h1>Dependabot Working</h1>
-      <Img src="../img/exampleci/dependabot-prs.png" />
+      <Img src="../img/dependabot-prs.png" />
     </>
   );
 };
