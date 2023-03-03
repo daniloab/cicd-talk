@@ -9,7 +9,7 @@ const CircleCiSlack = () => {
   return (
     <>
       <h1>Workflow Fail Slack Notification</h1>
-      <Img src="../img/circleci/circleci-slack-notify.png" />
+      <Img src="../img/circleci-slack-notify.png" />
     </>
   );
 };

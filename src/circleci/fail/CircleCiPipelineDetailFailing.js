@@ -10,7 +10,7 @@ const CircleCiPipelineDetailFailing = () => {
   return (
     <>
       <h1>Workflow Fail</h1>
-      <Img src="../img/circleci/circleci-failing.png" />
+      <Img src="../img/circleci-failing.png" />
     </>
   );
 };

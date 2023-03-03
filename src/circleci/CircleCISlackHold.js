@@ -9,7 +9,7 @@ const CircleCiSlackHold = () => {
   return (
     <>
       <h1>Workflow Production</h1>
-      <Img src="../img/circleci/circleci-hold-slack.png" />
+      <Img src="../img/circleci-hold-slack.png" />
     </>
   );
 };

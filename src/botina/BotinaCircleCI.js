@@ -10,7 +10,7 @@ const BotinaCircleCi = () => {
   return (
     <>
       <h1>BOTina - CircleCI Release Workflow</h1>
-      <Img src="../img/botina/botina-circleci-workflow.png" />
+      <Img src="../img/botina-circleci-workflow.png" />
     </>
   );
 };

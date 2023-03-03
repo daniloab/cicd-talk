@@ -10,7 +10,7 @@ const CircleCiPipelineProd = () => {
   return (
     <>
       <h1>Workflow Prod Success</h1>
-      <Img src="../img/circleci/circleci-prod-pipeline.png" />
+      <Img src="../img/circleci-prod-pipeline.png" />
     </>
   );
 };
