@@ -1,0 +1,22 @@
+aliases:
+  # commands
+  - &yarn
+    name: Install Dependencies
+    command: |
+      yarn install --ignore-engines --frozen-lockfile --production=false
+      --non-interactive --cache-folder ~/.cache/yarn
+  # we need to checkout main to make git diff work well
+  - &checkout_main
+    name: checkout main
+    command: |
+      if [[ $(git rev-parse --abbrev-ref HEAD) != "main" ]]; then
+        git branch -f main origin/main;
+      fi
+  - &test
+    name: Run Tests
+    command: |
+      ...
+  - &test_changed
+    name: Run Tests only affected by changed files
+    command: |
+      ...

@@ -1,0 +1,10 @@
+# Job Filters
+- &filter-only-main
+  branches:
+    only:
+      - main
+
+- &filter-production
+  branches:
+    only:
+      - /feature-production\/.*/

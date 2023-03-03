@@ -9,7 +9,7 @@ export const Img = styled.img`
 const CircleCiPipelineSuccess = () => {
     return (
       <>
-        <h1>Pipelines</h1>
+        <h1>Workflow Success</h1>
         <Img src="../img/circleci/circleci-success.png" />
       </>
     );

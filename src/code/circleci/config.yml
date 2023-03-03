@@ -1,0 +1,19 @@
+version: 2.1
+setup: true
+orbs:
+  path-filtering: circleci/path-filtering@0.0.2
+parameters:
+  run_workflow_deploy:
+    default: false
+    type: boolean
+
+workflows:
+  setup:
+    jobs:
+      - path-filtering/filter:
+          base-revision: main
+          mapping: |
+            yarn.lock yarn-modified true
+            packages/client/.* client-modified true
+            packages/main/.* main-modified true
+          config-path: .circleci/workflows.yml

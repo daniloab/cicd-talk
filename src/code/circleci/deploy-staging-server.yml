@@ -1,0 +1,25 @@
+deploy_staging_server:
+  executor: node16
+  steps:
+    - attach_workspace:
+        at: ~/app
+    - run: *copy_env_staging
+    - run:
+        name: Build Nodejs
+        command: |
+          yarn build
+    - build_docker:
+        IMAGE_NAME: $IMAGE_NAME_SERVER
+        DOCKERFILE: ./packages/main/Dockerfile
+    - push_docker_image:
+        registry: $REGISTRY
+        imageName: $IMAGE_NAME_SERVER
+        production: false
+
+    - update_kubernetes:
+        NAMESPACE: 'woovi-stg'
+        TOKEN: $TOKEN
+        SERVER: $SERVER
+        CONTAINER: 'container-stg-server'
+        DEPLOYMENT: 'container-stg-server'
+        IMAGE: $IMAGE_NAME_SERVER

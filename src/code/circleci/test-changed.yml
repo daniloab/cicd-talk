@@ -1,0 +1,22 @@
+test_changed:
+  executor: node18
+  parallelism: 3
+  steps:
+    - attach_workspace:
+        at: ~/app
+    - restore_cache:
+        keys:
+          - mongodbbinaries-{{ checksum "yarn.lock" }}
+    - run: echo $CIRCLE_COMPARE_URL
+    - run: *copy_env
+    - run: *checkout_main
+    - run: *test_changed
+    - save_cache:
+        key: mongodbbinaries-{{ checksum "yarn.lock" }}
+        paths:
+          - ~/.cache/mongodb-binaries
+          - ~/.mongodb-binaries
+    - store_test_results:
+        path: ./test-results
+    - store_artifacts:
+        path: ./test-results

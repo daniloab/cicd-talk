@@ -1,0 +1,24 @@
+jobs:
+  install_deps:
+    executor: node16
+    steps:
+      - checkout
+      - run: *checkout_main
+      - run: node --version
+      - run: echo "This is pipeline ID << pipeline.id >>"
+      - run: echo $CIRCLE_COMPARE_URL
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: *yarn
+      - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+            - ./node_modules
+            - ./packages/client/node_modules
+            - ./packages/main/node_modules
+
+      - persist_to_workspace:
+          root: .
+          paths: .

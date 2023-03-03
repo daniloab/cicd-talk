@@ -7,9 +7,20 @@ import Website from "./Website";
 import Thanks from "./Thanks";
 import CircleCI from "./circleci/CircleCI";
 import CircleCiPipeline from "./circleci/CircleCiPipeline";
-import CircleCiPipelineDetailFailing from "./circleci/CircleCiPipelineDetailFailing";
-import CircleCiPipelineDetailFailingDetail from "./circleci/CircleCiPipelineDetailFailingDetail";
+import CircleCiPipelineDetailFailing from "./circleci/fail/CircleCiPipelineDetailFailing";
+import CircleCiPipelineDetailFailingDetail from "./circleci/fail/CircleCiPipelineDetailFailingDetail";
 import CircleCiPipelineSuccess from "./circleci/CircleCiPipelineSuccess";
+import CircleCiSlack from "./circleci/fail/CircleCiSlack";
+import CircleCiPipelineProd from "./circleci/CircleCiPipelineProd";
+import CircleCiSlackHold from "./circleci/CircleCiSlackHold";
+import Botina from "./botina/Botina";
+import BotinaHelpCommands from "./botina/BotinaHelpCommands";
+import BotinaDiff from "./botina/BotinaDiff";
+import BotinaRelease from "./botina/BotinaRelease";
+import BotinaCircleCi from "./botina/BotinaCircleCi";
+import ExampleCI from "./exampleci/ExampleCI";
+import ExampleDependabot from "./exampleci/ExampleDependabot";
+import ExampleActions from "./exampleci/ExampleActions";
 
 export { default as theme } from "./theme";
 export * as components from "./components";
@@ -38,13 +49,12 @@ export * as components from "./components";
 <ul>
   <li>What is CI/CD and why is it important?</li>
   <li>The benefits of CI/CD</li>
-  <li>Concept: Continuous Integration</li>
-  <li>Concept: Continuous Delivery</li>
   <li>Pipeline</li>
   <li>CI/CD at Woovi</li>
-  <li>Creating rules</li>
-  <li>Auto fixing</li>
-  <li>Testing rules</li>
+  <li>CircleCI</li>
+  <li>BOTina</li>
+  <li>CI/CD Minimal Example</li>
+  <li>Platforms and Clouds</li>
 </ul>
 
 ---
@@ -58,6 +68,7 @@ export * as components from "./components";
     <li>Automated</li>
     <li>Reliable</li>
     <li>Safer</li>
+    <li>Previews of Backend and Frontend</li>
     <li>No human interaction</li>
   </Appear>
 </ul>
@@ -107,6 +118,18 @@ export * as components from "./components";
 
 ---
 
+# CircleCI
+
+<ul>
+  <Appear>
+    <li>Staging</li>
+    <li>Production</li>
+    <li>Configuring a Worflow</li>
+  </Appear>
+</ul>
+
+---
+
 <CircleCI />
 
 ---
@@ -123,14 +146,242 @@ export * as components from "./components";
 
 ---
 
+<CircleCiSlack />
+
+---
+
 <CircleCiPipelineSuccess />
+
+---
+
+<CircleCiPipelineProd />
+
+---
+
+<CircleCiSlackHold />
+
+---
+
+# Configuring a Workflow
+
+<ul>
+  <Appear>
+    <li>Config</li>
+    <li>yml</li>
+    <li>ORBS</li>
+    <li>jobs</li>
+    <li>commands</li>
+    <li>filters</li>
+  </Appear>
+</ul>
+
+---
+
+<Code
+  title="config.yml"
+  code={require("!raw-loader!./code/circleci/config.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+  steps={[
+    { range: [0, 20], notes: "Workflows" },
+    { range: [1, 8], notes: "Initial Config" },
+    { range: [10, 20], notes: "Jobs" },
+  ]}
+/>
+
+---
+
+<Code
+  title="workflows.yml"
+  code={require("!raw-loader!./code/circleci/workflows.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+  steps={[
+    { range: [1, 8], notes: "Initial Config" },
+    { range: [9, 20], notes: "Jobs" },
+  ]}
+/>
+
+---
+
+<Code
+  title="aliases"
+  code={require("!raw-loader!./code/circleci/aliases.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+  steps={[
+    { range: [0,25], notes: "aliases" },
+    { range: [3, 8], notes: "&yarn" },
+    { range: [9, 14], notes: "&checkout_main" },
+    { range: [15, 18], notes: "&test" },
+    { range: [19, 24], notes: "&test_changed" },
+  ]}
+/>
+
+---
+
+<Code
+  title="jobs"
+  code={require("!raw-loader!./code/circleci/jobs.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+/>
+
+---
+
+<Code
+  title="filters"
+  code={require("!raw-loader!./code/circleci/filters.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+  steps={[
+    { range: [0, 11], notes: "filters" },
+    { range: [2, 6], notes: "&filter-only-main" },
+    { range: [7, 10], notes: "&filter-only-main" },
+  ]}
+/>
+
+---
+
+<Code
+  title="test-changed"
+  code={require("!raw-loader!./code/circleci/test-changed.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+/>
+
+---
+
+<Code
+  title="deploy-staging-server"
+  code={require("!raw-loader!./code/circleci/deploy-staging-server.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+/>
+
+---
+
+<Botina />
+
+---
+
+<BotinaHelpCommands />
+
+---
+
+<BotinaDiff />
+
+---
+
+<BotinaRelease />
+
+---
+
+<BotinaCircleCi />
+
+---
+
+<ExampleCI />
+
+---
+
+<ul>
+  <Appear>
+    <li>Test</li>
+    <li>Deploy</li>
+    <li>Automatic Updates</li>
+  </Appear>
+</ul>
+
+---
+
+<Code
+  title="test.yml"
+  code={require("!raw-loader!./code/exampleci/test.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+/>
+
+---
+
+<Code
+  title="deploy.yml"
+  code={require("!raw-loader!./code/exampleci/deploy.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+  steps={[
+    { range: [0, 23], notes: "deploy" },
+    { range: [3, 6], notes: "push main" },
+    { range: [8, 23], notes: "jobs" },
+    { range: [11, 13], notes: "steps" },
+    { range: [14, 20], notes: "with" },
+    { range: [21, 23], notes: "env" },
+  ]}
+/>
+
+---
+
+<Code
+  title="dependabot.yml"
+  code={require("!raw-loader!./code/exampleci/dependabot.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+/>
+
+---
+
+<Code
+  title="automerge.yml"
+  code={require("!raw-loader!./code/exampleci/automerge.yml")}
+  showNumbers={false}
+  dark={true}
+  lang="yml"
+/>
+
+---
+
+<ExampleDependabot />
+
+---
+
+<ExampleActions />
+
+---
+
+# Platforms and Clouds
+
+<ul>
+  <Appear>
+    <li>Heroku</li>
+    <li>Vercel</li>
+    <li>CircleCI</li>
+    <li>GitHub Actions</li>
+    <li>AWS</li>
+    <li>Digital Ocean</li>
+    <li>onrender</li>
+    <li>Back4App</li>
+    <li>Cloudflare</li>
+  </Appear>
+</ul>
 
 ---
 
 # References
 
 - [Woovi - Shipping to Production Series'](https://dev.to/daniloab/series/20183)
-- [CI/CD 101 | All you need to know](https://dev.to/katalon/ci-cd-101-all-you-need-to-know-4j04)
+- [Improving Operational Work with a Slack Bot](https://daniloab.github.io/botina-slack-talk/#0)
+- [BOTina Slack - Open Source](https://github.com/daniloab/botina-slack-talk)
+- [Woovi Tech](https://dev.to/woovi)
 
 ---
 
